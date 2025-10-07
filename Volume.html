@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="pembungkus">
+  <header>
+    <h1><b>Leonaaardd_ Blog</b></h1>
+    <nav>
+      <ul>
+        <li><a href="Beranda.html"><b>Home</b></a></li>
+        <li><a href="Mapel.html"><b>Jadwal Pelajaran</b></a></li>
+        <li><a href="Syair.html"><b>Syair Lagu</b></a></li>
+        <li class="dropdown">
+<a href="#" class="dropbtn"><b>Menghitung</b></a>
+<ul class="dropdown-content">
+<li><a href="Luas.html">Luas</a></li>
+<li><a href="Volume.html">Volume</a></li>
+</ul>
+</li>
+        <li><a href="Porto.html"><b>Portofolio</b></a></li>
+      </ul>
+    </nav>
+  </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Volume Balok</title>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Luas Persegi Panjang</title>
+  <!-- Bootstrap CSS -->
+  <style>
+.section-kalkulator {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e6f7ff, #ffffff);
+  padding: 2rem;
+}
+
+.kalkulator-wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.kalkulator-card {
+  background-color: #313131;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px orange;
+  padding: 125px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.kalkulator-title {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+form input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 204, 0.25);
+}
+
+.btn-kalkulator {
+  background: linear-gradient(135deg, #0077cc, #00c6ff);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.btn-kalkulator:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 119, 255, 0.3);
+}
+
+.hasil-box {
+  margin-top: 2rem;
+}
+
+.hasil-text {
+  font-size: 1.5rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.btn-kembali {
+  background: linear-gradient(135deg, #cc8400, #e69500);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-inline: 48% auto;
+  transition: transform 0.3s ease;
+}
+
+.btn-kembali:hover {
+  transform: scale(1.05);
+}
+
+.btn-hitung {
+  background: linear-gradient(135deg, #cc8400, #e69500);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-inline: auto;
+  transition: transform 0.3s ease;
+}
+
+.btn-hitung:hover {
+  transform: scale(1.05);
+}
+/* Fade-in animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Montserrat', Arial, sans-serif;
+      background-color: #101010;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .p1 {
+      color: white;
+      text-align: center;
+    }
+    .p2 {
+      color: white;
+      text-align: center;
+      font-size: 30px;
+      margin: 50px 0px 50px 0px;
+    }
+    .p3 {
+      color: white;
+      text-align: justify;
+      display: flex;
+    }
+    .p4 {
+      color: white;
+      text-align: center;
+    }
+    .footer {
+      color: rgb(112, 112, 112);
+      text-align: center;
+      margin: 30px 0px 30px 0px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      background-color: orange;
+      color: #101010;
+      position: relative;
+      height: 30px;
+    }
+    header h1 {
+      font-size: 20px;
+      padding: 0px 0px 0px 10px;
+      margin: 0;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0px 10px 0px 0px;
+    }
+    nav a {
+      color: #101010;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .artikel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .article-box {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid orange;
+      padding: 15px;
+      background-color: #333;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      max-width: 400px;
+      flex: 1;
+    }
+    .article-content {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .article-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    article:not(.article-box) {
+      border: 2px solid orange;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      max-width: 400px;
+      flex: 1;
+    }
+    aside {
+      text-align: center;
+    }
+    aside button {
+      display: block;
+      margin: 0 auto;
+    }
+    .song-container {
+      background: #4e4e4e;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 32px;
+    }
+    h2 {
+      text-align: center;
+      color: orange;
+    }
+    h3 {
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+    pre.chord-lyrics {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      color: white;
+      padding: 16px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+    .highlight {
+      background-color: #4e4e4e;
+      color: orange;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 0.85em;
+    }
+    .highlight1 {
+      background-color: #4e4e4e;
+      color: rgb(15, 109, 197);
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 0.85em;
+    }
+    body {
+      background: #101010;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    table {
+      width: 90%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background: #222;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    th, td {
+      padding: 14px 10px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background: orange;
+      color: #222;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .hari {
+      background: #333;
+      color: orange;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  </style>
+</head>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+  <div class="kalkulator-card">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-lg rounded-4">
+          <div class="card-body p-4">
+            <h3 class="kalkulator-title">Hitung Volume Balok</h3>
+            <form id="volumeForm">
+              <div class="mb-3">
+                <label for="panjang" class="form-label">Panjang</label>
+                <input type="number" class="form-control" id="panjang" placeholder="Masukkan panjang" required>
+              </div>
+              <div class="mb-3">
+                <label for="lebar" class="form-label">Lebar</label>
+                <input type="number" class="form-control" id="lebar" placeholder="Masukkan lebar" required>
+              </div>
+              <div class="mb-3">
+                <label for="tinggi" class="form-label">Tinggi</label>
+                <input type="number" class="form-control" id="tinggi" placeholder="Masukkan tinggi" required>
+              </div>
+              <button type="submit" class="btn-hitung">Hitung</button>
+            </form>
+
+            <div class="mt-4 text-center">
+              <h5>Hasil:</h5>
+              <p id="hasil" class="fw-bold fs-4 text-success">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("volumeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const panjang = parseFloat(document.getElementById("panjang").value);
+      const lebar = parseFloat(document.getElementById("lebar").value);
+      const tinggi = parseFloat(document.getElementById("tinggi").value);
+
+      if (panjang > 0 && lebar > 0 && tinggi > 0) {
+        const volume = panjang * lebar * tinggi;
+        document.getElementById("hasil").textContent = volume + " cmÂ³";
+      } else {
+        document.getElementById("hasil").textContent = "Masukkan angka yang valid!";
+      }
+    });
+  </script>
+<br>
+<br>
+<br>
+<br>
+  <button class="btn-kembali" onclick="window.location.href='Beranda.html'">Go Back</button>
+</body>
+</html>
